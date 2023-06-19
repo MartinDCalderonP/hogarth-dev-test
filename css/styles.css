@@ -1,0 +1,106 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.double-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .double-hero {
+    flex-direction: row;
+  }
+}
+
+.hero {
+  flex: 0.5;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero > a,
+.hero > div {
+  width: 75%;
+}
+
+.hero-space {
+  background-image: url("../images/final-frontier_large_2x.jpg");
+}
+
+.hero-moon {
+  background-image: url("../images/luna_large_2x.jpg");
+}
+
+.row-mobile {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .row-mobile {
+    display: none;
+  }
+}
+
+.row-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .row-desktop {
+    display: flex;
+  }
+}
+
+.gallery-photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 684px;
+}
+
+.gallery-photo > figure {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .gallery-photo {
+    flex-direction: row;
+    height: 342px;
+  }
+  .flex-25-75 > figure:first-child {
+    flex: 0.25;
+  }
+  .flex-25-75 > figure:last-child {
+    flex: 0.75;
+  }
+  .flex-75-25 > figure:first-child {
+    flex: 0.75;
+  }
+  .flex-75-25 > figure:last-child {
+    flex: 0.25;
+  }
+  .flex-50-50 > * {
+    flex: 0.5;
+  }
+}
